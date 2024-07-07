@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GeistSans } from 'geist/font/sans';
+import { Anek_Telugu } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const AnekTelugu = Anek_Telugu({ subsets: ["latin"], variable: "--font-caption"} );
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={GeistSans.variable}>{children}</body>
     </html>
   );
 }
